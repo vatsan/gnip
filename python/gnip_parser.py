@@ -1,8 +1,8 @@
-'''
-        cjson/json parser for GNIP tweets
+"""
+	cjson/json parser for GNIP tweets
 	Srivatsan Ramanujam<vatsan.cs@utexas.edu>
 	2 May 2013
-'''
+"""
 import sys
 import codecs, csv, cStringIO
 
