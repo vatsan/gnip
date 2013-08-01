@@ -32,6 +32,8 @@ class JSONDecoder(object):
         return self.decoder.decoder(json_string) if self.decoder_type=='cjson' else self.decoder.loads(json_string)
         
 
+## Begin Unicode Readers & Writers ##
+#Copied from http://docs.python.org/2/library/csv.html
 class UTF8Recoder:
     """
     Iterator that reads an encoded stream and reencodes the input to UTF-8
@@ -90,6 +92,9 @@ class UnicodeWriter:
     def writerows(self, rows):
         for row in rows:
             self.writerow(row)
+
+
+## End Unicode Readers & Writers ##
 
 #Initialize global decoder variable
 jdecoder = JSONDecoder()
