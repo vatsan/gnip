@@ -2,7 +2,7 @@
 	This program is based on https://github.com/gnip/support/blob/master/Premium%20Stream%20Connection/Python/StreamingConnection.py
 	1) I have extended it to read base-64 encoded credentials from file in $HOME
 	2) Also adding support to handle "connection reset by peer" errors
-        3) The extract data will automatically be saved to a file of the form <date-month-year.json> in the directory provided in the output. 
+        3) The extracted data will automatically be saved to a file of the form <date-month-year.json> in the directory provided in the output. 
            If such a file exists, it will be appended to the same.
         Srivatsan Ramanujam <vatsan.cs@utexas.edu>
 '''
