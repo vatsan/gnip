@@ -20,10 +20,12 @@ class JSONDecoder(object):
            import cjson
            self.decoder = cjson
            self.decoder_type = 'cjson'
+           self.decoder_error = cjson.DecodeError
         except ImportError:
            import json
            self.decoder = json
            self.decoder_type = 'json'
+           self.decoder_error = ValueError
 
     def decode(self,json_string):
         """
@@ -145,7 +147,7 @@ def vanillaParse(json_string):
     jobj = None
     try:
        jobj = jdecoder.decode(json_string)
-    except JSONDecodeError, e:
+    except jdecoder.decoder_error, e:
        jobj = None
        sys.stderr.write("\nJSON Decode error : {0}".format(str(e)))
 
